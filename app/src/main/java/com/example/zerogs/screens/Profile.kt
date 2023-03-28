@@ -15,18 +15,19 @@ import androidx.compose.ui.semantics.SemanticsProperties.Text
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.zerogs.ui.theme.Purple700
 
 @Composable
 fun ProfileScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.DarkGray),
+            .background(Purple700),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = "PROFILE",
-            fontSize = MaterialTheme.typography.h3.fontSize,
+            fontSize = MaterialTheme.typography.h2.fontSize,
             fontWeight = FontWeight.Bold,
             color = Color.White
         )

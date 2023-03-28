@@ -2,7 +2,9 @@ package com.example.zerogs.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val Blue300 = Color(0xFFD8EDFD)
+val Green100 = Color(0xFFCCE8DB)
+val Purple200 = Color(0xFFBEB4D6)
+val Purple500 = Color(0xFFFADAE2)
+val Purple700 = Color(0xFFCC97C1)
+val Grey90 = Color(0xFFD0D0D0)

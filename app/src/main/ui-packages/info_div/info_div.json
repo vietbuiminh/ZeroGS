@@ -1,0 +1,536 @@
+{
+  "name": "info_div",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "UIbRoBQ7E4cP4zAjtsQXcW",
+    "node": "3:16",
+    "version": "3244510106",
+    "component-id": "2d748f4bf21049c1940321be0f4c32b7f609aaa9"
+  },
+  "default": "Info Div",
+  "documentation": "Info Card intended to notify user on the local/near by donation that just posted",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 2"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 4"
+      },
+      {
+        "type": "image",
+        "id": "Rectangle 3"
+      },
+      {
+        "type": "text",
+        "id": "Rock Island"
+      },
+      {
+        "type": "vector",
+        "id": "Vector"
+      },
+      {
+        "type": "group",
+        "id": "iconmonstr-user-19 1"
+      },
+      {
+        "type": "text",
+        "id": "@ajenjoak"
+      },
+      {
+        "type": "text",
+        "id": "123 Drive, Rock Island"
+      },
+      {
+        "type": "text",
+        "id": "Monday: 12:00PM - 3:00PM Tuesday: 1:00PM - 10:00PM"
+      },
+      {
+        "type": "text",
+        "id": "Details ->"
+      },
+      {
+        "type": "text",
+        "id": "Free Canned Food for Pickup"
+      },
+      {
+        "type": "group",
+        "id": "Finder Button"
+      },
+      {
+        "type": "vector",
+        "id": "user icon"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 1"
+      },
+      {
+        "type": "group",
+        "id": "iconmonstr-crosshair-8 1"
+      },
+      {
+        "type": "vector",
+        "id": "finder icon"
+      }
+    ],
+    "modes": {
+      "Info Div": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Rectangle 2",
+              "Rectangle 4",
+              "Rectangle 3",
+              "Rock Island",
+              "Vector",
+              "iconmonstr-user-19 1",
+              "@ajenjoak",
+              "123 Drive, Rock Island",
+              "Monday: 12:00PM - 3:00PM Tuesday: 1:00PM - 10:00PM",
+              "Details ->",
+              "Free Canned Food for Pickup",
+              "Finder Button"
+            ],
+            "background-color": "$background-color",
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 2",
+            "margin": {
+              "top": "15.0"
+            },
+            "border-radius": "6.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "rectangle_2.svg"
+          },
+          {
+            "id": "Rectangle 4",
+            "margin": {
+              "top": "15.0",
+              "right": "237.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "rectangle_4.svg"
+          },
+          {
+            "id": "Rectangle 3",
+            "opacity": "0.800000011920929",
+            "margin": {
+              "top": "15.0",
+              "right": "237.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "image-content": "$donation-img",
+            "scale": "cover"
+          },
+          {
+            "id": "Rock Island",
+            "margin": {
+              "left": "16.0",
+              "right": "286.0",
+              "bottom": "176.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "300.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.6274509803921569"
+            },
+            "text-content": "$nearby-location",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "11.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Vector",
+            "margin": {
+              "left": "6.3333282470703125",
+              "top": "2.0",
+              "right": "346.3333435058594",
+              "bottom": "181.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector.svg"
+          },
+          {
+            "id": "iconmonstr-user-19 1",
+            "margin": {
+              "left": "9.0",
+              "top": "141.0",
+              "right": "324.0",
+              "bottom": "25.0"
+            },
+            "is-structured": "false",
+            "children": [
+              "user icon"
+            ]
+          },
+          {
+            "id": "@ajenjoak",
+            "margin": {
+              "left": "9.0",
+              "top": "166.0",
+              "right": "292.0",
+              "bottom": "11.0"
+            },
+            "tap-handler": "$user-acc-link",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "@ajenjoak",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "11.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          },
+          {
+            "id": "123 Drive, Rock Island",
+            "margin": {
+              "left": "138.0",
+              "top": "52.0",
+              "right": "17.0",
+              "bottom": "125.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$address-card",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "11.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          },
+          {
+            "id": "Monday: 12:00PM - 3:00PM Tuesday: 1:00PM - 10:00PM",
+            "margin": {
+              "left": "138.0",
+              "top": "72.0",
+              "right": "17.0",
+              "bottom": "91.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "300.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$week-time",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "11.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          },
+          {
+            "id": "Details ->",
+            "margin": {
+              "left": "138.0",
+              "top": "124.0",
+              "right": "17.0",
+              "bottom": "53.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "300.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$link-card",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "11.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand",
+            "underline": "true"
+          },
+          {
+            "id": "Free Canned Food for Pickup",
+            "margin": {
+              "left": "138.0",
+              "top": "29.0",
+              "right": "17.0",
+              "bottom": "144.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$title-card",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          },
+          {
+            "id": "Finder Button",
+            "margin": {
+              "left": "295.0",
+              "top": "133.0",
+              "right": "17.0",
+              "bottom": "12.0"
+            },
+            "tap-handler": "$map-link",
+            "is-structured": "false",
+            "children": [
+              "Ellipse 1",
+              "iconmonstr-crosshair-8 1"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "user icon",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "user_icon.svg"
+          },
+          {
+            "id": "Ellipse 1",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "ellipse_1.svg"
+          },
+          {
+            "id": "iconmonstr-crosshair-8 1",
+            "margin": "11.0",
+            "is-structured": "false",
+            "children": [
+              "finder icon"
+            ],
+            "background-color": {
+              "alpha": "0.0",
+              "hue": "152.1428571428571",
+              "saturation": "0.12068965517241373",
+              "value": "0.9098039215686274"
+            }
+          },
+          {
+            "id": "finder icon",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "finder_icon.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "background-color": {
+      "data-type": "color",
+      "required": false,
+      "description": ""
+    },
+    "donation-img": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "nearby-location": {
+      "data-type": "text",
+      "required": false,
+      "description": "using address to get the city name"
+    },
+    "user-acc-link": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": "link to this specific donor profile page"
+    },
+    "address-card": {
+      "data-type": "text",
+      "required": false,
+      "description": "user address for the card"
+    },
+    "week-time": {
+      "data-type": "text",
+      "required": false,
+      "description": "this is to notify pickup time that user can come to get the product."
+    },
+    "link-card": {
+      "data-type": "text",
+      "required": false,
+      "description": "link to a detail screen about the donation"
+    },
+    "title-card": {
+      "data-type": "text",
+      "required": false,
+      "description": "title for the card"
+    },
+    "map-link": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": "link to Map screen with the address read to direct"
+    }
+  },
+  "previews": [
+    {
+      "design": "Info Div",
+      "size": {
+        "width": 358.0,
+        "height": 191.0
+      },
+      "parameters": {
+        "background-color": {},
+        "donation-img": "rectangle_3.jpeg",
+        "nearby-location": "Rock Island",
+        "address-card": "123 Drive, Rock Island",
+        "week-time": "Monday: 12:00PM - 3:00PM\nTuesday: 1:00PM - 10:00PM",
+        "link-card": "Details ->",
+        "title-card": "Free Canned Food for Pickup"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

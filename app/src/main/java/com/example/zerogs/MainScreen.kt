@@ -2,6 +2,7 @@ package com.example.zerogs
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavDestination
@@ -10,16 +11,17 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import com.example.zerogs.BottomBarScreen.Donate.icon
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
     Scaffold(
-        topBar = { TopAppBar(title = { Text("ZERO") }, backgroundColor = Color.White)},
-        backgroundColor = Color.White,
         bottomBar = { BottomBar(navController = navController) }
     ) {
         BottomNavGraph(navController = navController)
@@ -57,6 +59,7 @@ fun RowScope.AddItem(
     navController: NavHostController
 ) {
     BottomNavigationItem(
+
         label =  {
             Text(text = screen.title)
         },

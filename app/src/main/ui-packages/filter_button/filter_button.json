@@ -1,0 +1,119 @@
+{
+  "name": "filter_button",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "UIbRoBQ7E4cP4zAjtsQXcW",
+    "node": "2:43",
+    "version": "3244510106",
+    "component-id": "cdc10bf8c789911174b72edb631a26f247de2ccd"
+  },
+  "default": "Filter button",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 1"
+      },
+      {
+        "type": "text",
+        "id": "local"
+      }
+    ],
+    "modes": {
+      "Filter button": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Rectangle 1",
+              "local"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 1",
+            "border-radius": "15.5",
+            "tap-handler": "$tap-to-change",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "rectangle_1.svg"
+          },
+          {
+            "id": "local",
+            "margin": {
+              "left": "4.0",
+              "top": "4.0",
+              "right": "5.0",
+              "bottom": "3.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "font-weight": "300.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$location-filter",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "12.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "tap-to-change": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": "change or update location by tapping"
+    },
+    "location-filter": {
+      "data-type": "text",
+      "required": false,
+      "description": "change according to user location"
+    }
+  },
+  "previews": [
+    {
+      "design": "Filter button",
+      "size": {
+        "width": 79.0,
+        "height": 22.0
+      },
+      "parameters": {
+        "location-filter": "local"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
