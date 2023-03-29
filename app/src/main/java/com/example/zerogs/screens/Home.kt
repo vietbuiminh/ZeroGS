@@ -1,69 +1,69 @@
 package com.example.zerogs.screens
 
-import androidx.compose.foundation.clickable
+import android.annotation.SuppressLint
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.zerogs.R
 import com.example.zerogs.components.FilterButton
 import com.example.zerogs.components.UserCard
-import com.example.zerogs.filterbutton.Rectangle1
-import com.example.zerogs.filterbutton.TopLevel
-import com.google.relay.compose.RowScopeInstance.rowWeight
-import java.time.DayOfWeek
+import com.example.zerogs.infodiv.InfoDiv
+import com.example.zerogs.ui.theme.Blue300
+import com.google.relay.compose.BoxScopeInstance.columnWeight
+import com.google.relay.compose.BoxScopeInstance.rowWeight
+import com.google.relay.compose.RelayContainer
 import java.util.*
-import androidx.compose.material.Scaffold as MaterialScaffold
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen() {
     val date = Calendar.getInstance()
-    val week = Calendar.DAY_OF_WEEK
-    val day = Calendar.DAY_OF_MONTH
-    val year = Calendar.YEAR
-            Column(
+    Scaffold(
+        topBar = {
+            TopAppBar(
                 modifier = Modifier
-                    .padding(horizontal = 16.dp)
-                    .fillMaxWidth(),
+                    .height(70.dp)
+                    .fillMaxSize(),
+                backgroundColor = Color.White,
+                elevation = 0.dp
             ) {
-                TopAppBar(
-                    modifier = Modifier.height(70.dp),
-                    backgroundColor = Color.White,
-                    elevation = 0.dp
+                Row(
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp)
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Row(
-                        modifier = Modifier
-                            .padding(bottom = 16.dp)
-                            .fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-
-                    ) {
-                        HeaderRow()
-                    }
+                    HeaderRow()
                 }
+            }
+        },
+        content = {paddingValues ->
+            Column(modifier = Modifier
+                .fillMaxSize()
+                .padding(
+                    top = paddingValues.calculateTopPadding()
+                )
+            ) {
                 BodyContent(
                     modifier = Modifier
-                        .padding(top = 16.dp, bottom = 16.dp)
+                        .padding(horizontal = 16.dp, vertical = 5.dp)
                         .fillMaxWidth()
                 )
-
-                Text(
-                    modifier = Modifier
-                        .padding(top = 16.dp, bottom = 16.dp)
-                        .fillMaxWidth(),
-                    text = "Here is the latest updated on your local neighborhood for ${week} ${day}."
-                )
-
             }
-
+        }
+    )
 }
 
 
@@ -92,7 +92,36 @@ private fun HeaderRow() {
 
 @Composable
 private fun BodyContent(modifier: Modifier) {
-    UserCard(name = "Katie")
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+    ) {
+        UserCard(
+            modifier = modifier,
+            name = "Katie"
+        )
+        Text(
+            modifier = modifier,
+            text="Here is the latest updated on your local neighborhood for Friday March 24."
+        )
+        MaterialTheme {
+            RelayContainer {
+                InfoDiv(
+                    backgroundColor = Blue300,
+                    donationImg = painterResource(R.drawable.info_div_rectangle_3),
+                    nearbyLocation = "Rock Island",
+                    userAccLink = {},
+                    addressCard = "123 Drive, Rock Island",
+                    weekTime = "Monday: 12:00PM - 3:00PM\nTuesday: 1:00PM - 10:00PM",
+                    linkCard = "Details ->",
+                    titleCard = "Free Canned Food for Pickup",
+                    mapLink = {},
+                    modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
+                )
+            }
+        }
+    }
 }
 
 @Composable

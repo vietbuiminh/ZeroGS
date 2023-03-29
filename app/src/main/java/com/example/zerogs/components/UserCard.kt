@@ -19,8 +19,9 @@ import androidx.compose.ui.unit.dp
 import com.example.zerogs.R
 
 @Composable
-fun UserCard(name: String) {
+fun UserCard(modifier: Modifier, name: String) {
     Row(
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
@@ -49,5 +50,5 @@ fun UserCard(name: String) {
 @Preview
 @Composable
 fun UserCardPreview() {
-    UserCard(name = "Kate")
+    UserCard(modifier = Modifier, name = "Kate")
 }
