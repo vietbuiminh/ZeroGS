@@ -33,7 +33,13 @@ val Typography = Typography(
     ),
     body1 = TextStyle(
         fontFamily = QuickSand,
-        fontWeight = FontWeight.Light,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp
+    ),
+
+    body2 = TextStyle(
+        fontFamily = QuickSand,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp
     ),
 

@@ -1,10 +1,10 @@
 package com.example.zerogs.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -14,21 +14,61 @@ import androidx.compose.ui.semantics.SemanticsProperties.Text
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.zerogs.components.FilterButton
 import com.example.zerogs.ui.theme.Green100
 
 @Composable
 fun MapsScreen() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Green100),
-        contentAlignment = Alignment.Center
+    TopAppBar(
+        modifier = Modifier.height(70.dp),
+        backgroundColor = Color.White,
+        elevation = 0.dp
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .padding(horizontal = 16.dp)
+                .fillMaxWidth(),
+        ) {
+            HeaderRow()
+        }
+
+    }
+//    Box(
+//        modifier = Modifier
+//            .fillMaxSize()
+//            .background(Green100),
+//        contentAlignment = Alignment.Center
+//    ) {
+//        Text(
+//            text = "MAPS",
+//            fontSize = MaterialTheme.typography.h2.fontSize,
+//            fontWeight = FontWeight.Bold,
+//            color = Color.Black
+//        )
+//    }
+}
+
+@Composable
+private fun HeaderRow() {
+    Column(
+        modifier = Modifier.fillMaxHeight(),
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "MAPS",
+            text = "Maps",
             fontSize = MaterialTheme.typography.h2.fontSize,
-            fontWeight = FontWeight.Bold,
+            fontWeight = MaterialTheme.typography.h2.fontWeight,
             color = Color.Black
+        )
+    }
+    Column(
+        modifier = Modifier.fillMaxHeight(),
+        verticalArrangement = Arrangement.Center
+    ) {
+        FilterButton(
+            displayText = "local"
         )
     }
 }

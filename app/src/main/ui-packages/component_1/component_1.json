@@ -1,0 +1,121 @@
+{
+  "name": "component_1",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "UIbRoBQ7E4cP4zAjtsQXcW",
+    "node": "70:80",
+    "version": "3249661799",
+    "component-id": "47863c00293b0790e924bbb594ea9a2976e34675"
+  },
+  "default": "Component 1",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "iconmonstr-user-20 1"
+      },
+      {
+        "type": "text",
+        "id": "Howdy, Kate !"
+      },
+      {
+        "type": "vector",
+        "id": "Vector"
+      }
+    ],
+    "modes": {
+      "Component 1": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "iconmonstr-user-20 1",
+              "Howdy, Kate !"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "iconmonstr-user-20 1",
+            "margin": {
+              "right": "103.0"
+            },
+            "is-structured": "false",
+            "children": [
+              "Vector"
+            ]
+          },
+          {
+            "id": "Howdy, Kate !",
+            "margin": {
+              "left": "40.0",
+              "top": "7.0",
+              "bottom": "7.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Howdy, Kate !",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": "15.0",
+            "line-height": "1.25",
+            "typeface": "Quicksand"
+          },
+          {
+            "id": "Vector",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector.svg"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "name": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Component 1",
+      "size": {
+        "width": 136.0,
+        "height": 33.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
