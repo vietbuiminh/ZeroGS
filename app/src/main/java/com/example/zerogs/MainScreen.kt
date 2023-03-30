@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import com.example.zerogs.BottomBarScreen.Donate.icon
+import com.example.zerogs.ui.theme.bottomNavBarHeight
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -24,7 +25,9 @@ fun MainScreen() {
     Scaffold(
         bottomBar = { BottomBar(navController = navController) }
     ) {
-        BottomNavGraph(navController = navController)
+        BottomNavGraph(
+            navController = navController
+        )
     }
 }
 
@@ -40,6 +43,7 @@ fun BottomBar(navController: NavHostController) {
     val currentDestination = navBackStackEntry?.destination
 
     BottomNavigation(
+        modifier = Modifier.height(bottomNavBarHeight),
         backgroundColor = Color.White
     ) {
         screens.forEach { screen ->

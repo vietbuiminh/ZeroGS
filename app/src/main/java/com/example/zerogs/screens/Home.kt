@@ -3,6 +3,8 @@ package com.example.zerogs.screens
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Text
@@ -17,13 +19,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.zerogs.R
 import com.example.zerogs.components.FilterButton
-import com.example.zerogs.components.UserCard
+import com.example.zerogs.components.InfoCard
 import com.example.zerogs.infodiv.InfoDiv
 import com.example.zerogs.ui.theme.Blue300
+import com.example.zerogs.ui.theme.bottomNavBarHeight
 import com.google.relay.compose.BoxScopeInstance.columnWeight
 import com.google.relay.compose.BoxScopeInstance.rowWeight
 import com.google.relay.compose.RelayContainer
 import java.util.*
+import com.example.zerogs.components.UserCard as UserCard
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,16 +53,20 @@ fun HomeScreen() {
                 }
             }
         },
+        containerColor = Color.White,
         content = {paddingValues ->
             Column(modifier = Modifier
                 .fillMaxSize()
                 .padding(
-                    top = paddingValues.calculateTopPadding()
+                    top = paddingValues.calculateTopPadding(),
+                    start = 16.dp,
+                    end = 16.dp,
+                    bottom = bottomNavBarHeight
                 )
             ) {
                 BodyContent(
                     modifier = Modifier
-                        .padding(horizontal = 16.dp, vertical = 5.dp)
+                        .padding(vertical = 7.dp)
                         .fillMaxWidth()
                 )
             }
@@ -93,9 +101,11 @@ private fun HeaderRow() {
 @Composable
 private fun BodyContent(modifier: Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
+            .verticalScroll(rememberScrollState())
+
     ) {
         UserCard(
             modifier = modifier,
@@ -105,22 +115,57 @@ private fun BodyContent(modifier: Modifier) {
             modifier = modifier,
             text="Here is the latest updated on your local neighborhood for Friday March 24."
         )
-        MaterialTheme {
-            RelayContainer {
-                InfoDiv(
-                    backgroundColor = Blue300,
-                    donationImg = painterResource(R.drawable.info_div_rectangle_3),
-                    nearbyLocation = "Rock Island",
-                    userAccLink = {},
-                    addressCard = "123 Drive, Rock Island",
-                    weekTime = "Monday: 12:00PM - 3:00PM\nTuesday: 1:00PM - 10:00PM",
-                    linkCard = "Details ->",
-                    titleCard = "Free Canned Food for Pickup",
-                    mapLink = {},
-                    modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
-                )
-            }
-        }
+        InfoCard(
+            modifier = modifier,
+            backgroundColor = Blue300,
+            image = painterResource(R.drawable.info_div_rectangle_3),
+            address = "123 Street St, Rock Island",
+            weekTime = "Monday: 12:00PM - 3:00PM\n" +
+                    "Tuesday: 1:00PM - 10:00PM",
+            title = "Free Canned Food for Pickup",
+            mapLink = ""
+        )
+        InfoCard(
+            modifier = modifier,
+            backgroundColor = Blue300,
+            image = painterResource(R.drawable.info_div_rectangle_3),
+            address = "123 Street St, Rock Island",
+            weekTime = "Monday: 12:00PM - 3:00PM\n" +
+                    "Tuesday: 1:00PM - 10:00PM",
+            title = "Free Canned Food for Pickup",
+            mapLink = ""
+        )
+        InfoCard(
+            modifier = modifier,
+            backgroundColor = Blue300,
+            image = painterResource(R.drawable.info_div_rectangle_3),
+            address = "123 Street St, Rock Island",
+            weekTime = "Monday: 12:00PM - 3:00PM\n" +
+                    "Tuesday: 1:00PM - 10:00PM",
+            title = "Free Canned Food for Pickup",
+            mapLink = ""
+        )
+        InfoCard(
+            modifier = modifier,
+            backgroundColor = Blue300,
+            image = painterResource(R.drawable.info_div_rectangle_3),
+            address = "123 Street St, Rock Island",
+            weekTime = "Monday: 12:00PM - 3:00PM\n" +
+                    "Tuesday: 1:00PM - 10:00PM",
+            title = "Free Canned Food for Pickup",
+            mapLink = ""
+        )
+        InfoCard(
+            modifier = modifier,
+            backgroundColor = Blue300,
+            image = painterResource(R.drawable.info_div_rectangle_3),
+            address = "123 Street St, Rock Island",
+            weekTime = "Monday: 12:00PM - 3:00PM\n" +
+                    "Tuesday: 1:00PM - 10:00PM",
+            title = "Free Canned Food for Pickup",
+            mapLink = ""
+        )
+
     }
 }
 

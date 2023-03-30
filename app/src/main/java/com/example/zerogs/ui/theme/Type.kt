@@ -47,7 +47,12 @@ val Typography = Typography(
         fontFamily = QuickSand,
         fontWeight = FontWeight.SemiBold,
         fontSize = 12.sp
-    )
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = QuickSand,
+        fontWeight = FontWeight.Light,
+        fontSize = 11.sp,
+    ),
 
     /* Other default text styles to override
     button = TextStyle(
