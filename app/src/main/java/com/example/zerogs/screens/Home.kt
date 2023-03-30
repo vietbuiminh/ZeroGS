@@ -61,7 +61,7 @@ fun HomeScreen() {
                     top = paddingValues.calculateTopPadding(),
                     start = 16.dp,
                     end = 16.dp,
-                    bottom = bottomNavBarHeight
+                    bottom = bottomNavBarHeight - 5.dp
                 )
             ) {
                 BodyContent(
