@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.example.zerogs.ui.theme.ZeroGSTheme
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMapOptions
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
@@ -36,8 +37,6 @@ class MainActivity : ComponentActivity(), OnMapReadyCallback {
     }
 
     val mapFragment = SupportMapFragment.newInstance()
-
-
     override fun onMapReady(googleMap: GoogleMap) {
         googleMap.addMarker(
             MarkerOptions()
@@ -45,6 +44,7 @@ class MainActivity : ComponentActivity(), OnMapReadyCallback {
                 .title("Marker")
         )
     }
+
 }
 
 //@Composable

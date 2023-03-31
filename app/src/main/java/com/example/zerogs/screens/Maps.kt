@@ -14,10 +14,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.zerogs.components.FilterButton
 import com.example.zerogs.ui.theme.bottomNavBarHeight
-import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMapOptions
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.maps.android.compose.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,23 +47,22 @@ fun MapsScreen() {
                 .fillMaxSize()
                 .padding(
                     top = paddingValues.calculateTopPadding(),
-                    start = 16.dp,
-                    end = 16.dp,
                     bottom = bottomNavBarHeight - 5.dp
                 )
             ) {
-                val singapore = LatLng(1.35, 103.87)
+                val augustana = LatLng(41.502591, -90.549753)
                 val cameraPositionState = rememberCameraPositionState {
-                    position = CameraPosition.fromLatLngZoom(singapore, 10f)
+                    position = CameraPosition.fromLatLngZoom(augustana, 15f)
                 }
+
                 GoogleMap(
                     modifier = Modifier.fillMaxSize(),
                     cameraPositionState = cameraPositionState
                 ) {
                     Marker(
-                        state = MarkerState(position = singapore),
-                        title = "Singapore",
-                        snippet = "Marker in Singapore"
+                        state = MarkerState(position = augustana),
+                        title = "Augustana College",
+                        snippet = "Marker in Augustana College"
                     )
                 }
 //                var uiSettings by remember { mutableStateOf(MapUiSettings()) }

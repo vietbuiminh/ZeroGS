@@ -2,12 +2,9 @@ package com.example.zerogs.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme.typography
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
@@ -18,14 +15,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.zerogs.R
 import com.example.zerogs.ui.theme.Blue300
-import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.outlined.Favorite
-import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.navigation.compose.rememberNavController
+import com.example.zerogs.BottomBarScreen
 import androidx.compose.material3.Card as Card
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,7 +67,7 @@ fun InfoCard(
         ) {
             Row(
                 modifier = Modifier
-                    .height(200.dp)
+                    .height(230.dp)
             ){
                 Image(
                     modifier = Modifier.fillMaxWidth(0.3f),
@@ -104,35 +104,46 @@ fun InfoCard(
                         style = TextStyle(textDecoration = TextDecoration.Underline)
                     )
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.End
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .fillMaxSize(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.Bottom
                     ) {
+                        var isSaved by remember { mutableStateOf(false) }
                         ExtendedFloatingActionButton(
                             modifier = Modifier.padding(end = 10.dp),
-                            onClick = { /* ... */ },
+                            onClick = { isSaved = !isSaved },
                             icon = {
                                 Icon(
-                                    Icons.Outlined.Favorite,
+                                    if (isSaved) {
+                                        Icons.Default.Favorite
+                                    } else {
+                                        Icons.Default.FavoriteBorder
+                                    },
                                     contentDescription = "Favorite"
                                 )
                             },
-                            text = { Text("Save") },
+                            text = {
+                                Text(
+                                    if (isSaved) "Saved" else {
+                                    "Save"
+                                }
+                            ) },
                             containerColor = Color.White,
                             elevation = FloatingActionButtonDefaults.elevation(1.dp)
                         )
-                        ExtendedFloatingActionButton(
-
-                            onClick = { /* ... */ },
-                            icon = {
-                                Icon(
-                                    Icons.Outlined.Search,
-                                    contentDescription = "Search"
-                                )
+                        FloatingActionButton(
+                            onClick = {
                             },
-                            text = { Text("Maps") },
                             containerColor = Color.White,
                             elevation = FloatingActionButtonDefaults.elevation(1.dp)
-                        )
+                        ) {
+                            Icon(
+                                Icons.Outlined.Place,
+                                contentDescription = "Search"
+                            )
+                        }
                     }
                 }
             }
