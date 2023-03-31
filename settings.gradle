@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ZeroGS"
+rootProject.name = "Zero"
 include ':app'
