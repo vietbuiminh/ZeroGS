@@ -2,7 +2,7 @@
 
 ![zero.PNG](Zero%20Problem%20Statement%20c4766c2a307c4826a6372a0ae614d716/zero.png)
 
-![Untitled](Zero%20Problem%20Statement%20c4766c2a307c4826a6372a0ae614d716/Untitled.png)
+![Untitled](Zero%20Problem%20Statement%20c4766c2a307c4826a6372a0ae614d716/screenshot.png)
 
 Zero is a community based supporting app where people come to find the latest donation in their local area. They can also notifying everyone with their donation through this app. This is targeting the Zero Hunger and Zero Waste of the United Nation 17 Development Goal in particularly with the problem of food insecurity, and fast fashion with waste in old clothings. 
 
