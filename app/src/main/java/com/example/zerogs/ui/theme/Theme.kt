@@ -1,10 +1,12 @@
 package com.example.zerogs.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 private val DarkColorPalette = darkColors(
@@ -28,6 +30,7 @@ private val LightColorPalette = lightColors(
     */
 )
 val bottomNavBarHeight = 55.dp
+val paddingBottom = Modifier.padding(bottom = 3.dp)
 @Composable
 fun ZeroGSTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {

@@ -32,16 +32,18 @@ import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SubmitForm() {
+    var title by rememberSaveable { mutableStateOf("") }
+    var address by rememberSaveable { mutableStateOf("") }
+    var description by rememberSaveable { mutableStateOf("") }
     Column(
         modifier = Modifier
             .padding(30.dp)
             .background(Color.White)
     ) {
-        var text by rememberSaveable { mutableStateOf("") }
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
-            value = text,
-            onValueChange = { text = it },
+            value = title,
+            onValueChange = { title = it },
             label = { Text("Title") },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Black,
@@ -51,8 +53,8 @@ fun SubmitForm() {
         )
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
-            value = text,
-            onValueChange = { text = it },
+            value = address,
+            onValueChange = { address = it },
             label = { Text("Address") },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Black,
@@ -62,8 +64,8 @@ fun SubmitForm() {
         )
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
-            value = text,
-            onValueChange = { text = it },
+            value = description,
+            onValueChange = { description = it },
             label = { Text("Description") },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = Color.Black,
