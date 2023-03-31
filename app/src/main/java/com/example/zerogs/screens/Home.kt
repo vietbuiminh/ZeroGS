@@ -33,7 +33,6 @@ import com.example.zerogs.components.UserCard as UserCard
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen() {
-    val date = Calendar.getInstance()
     Scaffold(
         topBar = {
             TopAppBar(
