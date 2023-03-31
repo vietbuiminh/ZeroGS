@@ -21,6 +21,8 @@ import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.zerogs.components.FilterButton
+import com.example.zerogs.components.ProfileMenu
+import com.example.zerogs.components.UserCard
 import com.example.zerogs.ui.theme.Purple700
 import com.example.zerogs.ui.theme.bottomNavBarHeight
 
@@ -91,7 +93,11 @@ private fun BodyContent(modifier: Modifier) {
             .verticalScroll(rememberScrollState())
 
     ) {
-
+        UserCard(
+            modifier = modifier,
+            name = "Katie"
+        )
+        ProfileMenu(modifier = Modifier)
     }
 }
 @Composable
