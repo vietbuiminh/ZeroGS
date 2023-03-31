@@ -6,6 +6,22 @@
 
 Zero is a community based supporting app where people come to find the latest donation in their local area. They can also notifying everyone with their donation through this app. This is targeting the Zero Hunger and Zero Waste of the United Nation 17 Development Goal in particularly with the problem of food insecurity, and fast fashion with waste in old clothings. 
 
+## How to run the app
+- Clone or fork the project to your local environment (Android Studio).
+- You'll need a billing account. Create one here [Google Cloud](https://console.cloud.google.com/billing).
+- Create a new project in cloud console [Google Cloud](https://console.cloud.google.com/). Once its created switch to that project.
+- Go to marketplace and enable google maps SDK for the new project [Market place](https://console.cloud.google.com/marketplace).
+-- "Maps SDK for Android"
+-- Enable billing through the billing account your created
+-- Enable google maps in cloud console
+- Specify "Android apps" and generate a SHA1 to restrict the Maps API only for the app.
+- Navigate to Gradle Scripts in inside ZeroGS, and make sure to add your API key to `local.properties`.
+```
+MAPS_API_KEY = [YOUR_API_KEY]
+```
+- Be sure that your Android Studio is the latest version
+
+
 The goal is spread the good the practice: Sharing is Caring.  
 
 - **Who** is experiencing the problem?
