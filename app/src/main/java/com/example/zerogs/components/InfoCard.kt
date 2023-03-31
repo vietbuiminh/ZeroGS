@@ -1,8 +1,12 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.example.zerogs.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,17 +24,22 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material3.*
+import androidx.compose.material3.FloatingActionButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.navigation.compose.rememberNavController
-import com.example.zerogs.BottomBarScreen
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.material3.Card as Card
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterialApi::class)
 @Composable
 fun InfoCard(
+    modalSheetState: ModalBottomSheetState,
+    coroutineScope: CoroutineScope,
     modifier: Modifier = Modifier,
     backgroundColor: Color,
     image: Painter,
@@ -38,7 +47,7 @@ fun InfoCard(
     address: String,
     title: String,
     weekTime: String,
-    mapLink: String
+    mapLink: String,
     ) {
     Column (
         modifier = modifier
@@ -58,8 +67,12 @@ fun InfoCard(
         }
         Card(
             onClick = {
-                //your onclick code here
-
+                coroutineScope.launch {
+                    if (modalSheetState.isVisible)
+                        modalSheetState.hide()
+                    else
+                        modalSheetState.animateTo(ModalBottomSheetValue.Expanded)
+                }
             },
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(8.dp),
@@ -148,13 +161,21 @@ fun InfoCard(
                 }
             }
         }
+
     }
 }
 
 @Preview
 @Composable
 fun InfoCardPreview() {
+    val coroutineScope = rememberCoroutineScope()
+    val modalSheetState = rememberModalBottomSheetState(
+        initialValue = ModalBottomSheetValue.Hidden,
+        confirmStateChange = {it != ModalBottomSheetValue.Expanded}
+    )
     InfoCard(
+        modalSheetState =  modalSheetState,
+        coroutineScope = coroutineScope,
         backgroundColor = Blue300,
         image = painterResource(R.drawable.info_div_rectangle_3),
         address = "123 Street St, Rock Island",
