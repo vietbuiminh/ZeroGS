@@ -57,16 +57,16 @@ fun MapsScreen() {
                 val cameraPositionState = rememberCameraPositionState {
                     position = CameraPosition.fromLatLngZoom(singapore, 10f)
                 }
-//                GoogleMap(
-//                    modifier = Modifier.fillMaxSize(),
-//                    cameraPositionState = cameraPositionState
-//                ) {
-//                    Marker(
-//                        state = MarkerState(position = singapore),
-//                        title = "Singapore",
-//                        snippet = "Marker in Singapore"
-//                    )
-//                }
+                GoogleMap(
+                    modifier = Modifier.fillMaxSize(),
+                    cameraPositionState = cameraPositionState
+                ) {
+                    Marker(
+                        state = MarkerState(position = singapore),
+                        title = "Singapore",
+                        snippet = "Marker in Singapore"
+                    )
+                }
 //                var uiSettings by remember { mutableStateOf(MapUiSettings()) }
 //                var properties by remember {
 //                    mutableStateOf(MapProperties(mapType = MapType.SATELLITE))
