@@ -9,6 +9,11 @@ sealed class BottomBarScreen(
     val title: String,
     val icon: ImageVector
 ) {
+    object Authentication: BottomBarScreen(
+        route = "authentication",
+        title = "authentication",
+        icon = Icons.Default.Home
+    )
     object Home: BottomBarScreen(
         route = "home",
         title = "Home",
