@@ -23,7 +23,8 @@ MAPS_API_KEY = [YOUR_API_KEY]
 
 
 ## About Zero
-Zero is a community-based support app where people come to find the latest donations in their local area. They can also notify everyone about their donation through this app. This is targeting the Zero Hunger and Zero Waste goals of the United Nations 17 Development Goals, in particular with the problems of food insecurity and fast fashion with waste in old clothing.
+Zero is a community-based support app where people come to find the latest donations in their local area. They can also notify everyone about their donation through this app. This is targeting the Goal 1: No Poverty and Goal 2: Zero Hunger goals of the United Nations 17 Development Goals, in particular with the problems of food insecurity and fast fashion with waste in old clothing. Through self donating coming from individual users the app also help the community achieve Goal 3: Good health and well being, Goal 10: Reduce Inequality, and Goal: 11 Sustainable Cities 
+
 On the homepage, users can look up information about different local neighborhoods that provide donations. The details will show the name, address, and contact information of the donors, as well as the time to expect donations. When the donor-recipient hits save, the item will be saved in the history to keep track, and the donors will receive notifications. On the donate page, we have a form where donors can upload information and images of products they want to give out. Next, we have the map page, where users can find nearby charities that receive or give donations, such as churches or colleges. The profile page is where we receive notifications, do ratings, and set up our information.
 
 Zero offers a user-friendly and effective solution for reducing food and clothing waste while helping those in need. We believe that our app has the potential to make a positive impact on communities and the environment.
